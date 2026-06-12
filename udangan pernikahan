@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Undangan Pernikahan | Dodi & Nurul</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ORNAMEN WAYANG (SVG) -->
+<div class="wayang-decoration wayang-left">
+    <svg viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 10 L60 30 L55 50 L70 70 L65 90 L80 110 L75 130 L90 150 L85 170 L70 180 L50 190 L30 180 L15 170 L10 150 L25 130 L20 110 L35 90 L30 70 L45 50 L40 30 L50 10Z" fill="#5e3c2e" stroke="#d4af7a" stroke-width="2" opacity="0.5"/>
+        <circle cx="50" cy="40" r="8" fill="#5e3c2e"/>
+        <path d="M30 80 L70 80 M25 100 L75 100" stroke="#d4af7a" stroke-width="2" opacity="0.5"/>
+    </svg>
+</div>
+<div class="wayang-decoration wayang-right">
+    <svg viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 10 L60 30 L55 50 L70 70 L65 90 L80 110 L75 130 L90 150 L85 170 L70 180 L50 190 L30 180 L15 170 L10 150 L25 130 L20 110 L35 90 L30 70 L45 50 L40 30 L50 10Z" fill="#5e3c2e" stroke="#d4af7a" stroke-width="2" opacity="0.5" transform="scale(-1,1) translate(-100,0)"/>
+        <circle cx="50" cy="40" r="8" fill="#5e3c2e"/>
+        <path d="M30 80 L70 80 M25 100 L75 100" stroke="#d4af7a" stroke-width="2" opacity="0.5" transform="scale(-1,1) translate(-100,0)"/>
+    </svg>
+</div>
+
+<!-- SPLASH SCREEN (Halaman pembuka) -->
+<div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+        <div class="splash-heart"><i class="fas fa-heart"></i></div>
+        <h2>Undangan Pernikahan</h2>
+        <h1>Dodi & Nurul</h1>
+        <p id="salamTamu" style="font-size: 1.2rem; margin-top: 0.5rem; color: #b8875a;"></p>
+        <button id="openInvitationBtn" class="open-btn">Buka Undangan</button>
+        <p class="splash-note">✨ Kami undang Anda untuk berbagi kebahagiaan ✨</p>
+    </div>
+</div>
+
+<!-- MAIN CONTENT (Awalnya disembunyikan) -->
+<div id="mainContent" class="main-content" style="display: none;">
+    <!-- Tombol Musik -->
+    <div class="music-control" id="musicToggle">
+        <i class="fas fa-music"></i>
+    </div>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="lagu-prewed.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h3>THE WEDDING OF</h3>
+            <h1>Dodi & Nurul</h1>
+            <p>Sabtu, 20 Desember 2028</p>
+            <p><i class="fas fa-map-marker-alt"></i> Masjid nasrullah, Jakarta barat</p>
+            <p id="heroSalam" style="font-size: 1.1rem; font-style: italic; margin-top: 1rem;"></p>
+        </div>
+        <div class="scroll-down" onclick="document.getElementById('couple').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Pasangan Pengantin -->
+    <section id="couple" class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Pasangan Bahagia</h2>
+            <div class="couple">
+                <div class="couple-card">
+                    <img src="foto-dodi.jpg" alt="Dodi" class="couple-img">
+                    <h3 class="couple-name">Dodi Damhadi</h3>
+                    <p>Putra dari Bpk. Camita & Ibu Tursinah</p>
+                </div>
+                <div class="and-icon"><i class="fas fa-heart"></i></div>
+                <div class="couple-card">
+                    <img src="foto-nurul.jpg" alt="Nurul" class="couple-img">
+                    <h3 class="couple-name">Nurul Awalia</h3>
+                    <p>Putri dari Bpk. Mohamad Iufi & Ibu Else Suryaningsih</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kisah Perjalanan Cinta (Timeline) -->
+    <section class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Perjalanan Cinta Kami</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>✨ Pertemuan Pertama</h3>
+                        <span class="timeline-date">Februari 2020</span>
+                        <p>Pertemuan 
+Kami percaya setiap pertemuan adalah bagian dari takdir.
+Dibulan Februari tahun 2017 perkenalan singkat melalui facebook dan kami memutuskan untuk bertemu secara langsung, siapa sangka pertemuan sederhana itu menjadi awal cerita kisah cinta kami..</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>💞 Memutuskan Serius</h3>
+                        <span class="timeline-date">Agustus 2021</span>
+                        <p>Pendekatan
+Seiring waktu, obrolan ringan tumbuh menjadi cerita panjang yang hangat, perasaan itu saling meyakinkan kami bahwa satu sama lain adalah jawaban dari doa-doa yang di panjatkan. Dan akhirnya kita memutuskan untuk lebih serius.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>💍 Lamaran</h3>
+                        <span class="timeline-date">Februari 2028</span>
+                        <p>Lamaran
+Tepat di tanggal 2 Februari 2028 atas izin Allah SWT dan kedua orang tua niat baik kami akhirnya berlanjut pada sebuah acara tunangan yang penuh doa dan kebahagiaan.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>📆 Menuju Pelaminan</h3>
+                        <span class="timeline-date">Mei 2028</span>
+                        <p>Menikah 
+Dan pada akhirnya di tanggal 5 Mei 2028 kami memutuskan akan mengikrarkan janji suci pernikahan.
+Percayalah, bukan karena bertemu lalu berjodoh, melainkan karena berjodoh maka kami dipertemukan..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Album Prewedding (Slider) -->
+    <section class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Album Prewedding</h2>
+            <div class="prewedding-slider">
+                <div class="slider-container" id="preweddingSlider">
+                    <div class="slider-track">
+                        <div class="slide"><img src="Prewed1.png" alt="Prewed 1"></div>
+                        <div class="slide"><img src="Prewed2.jpg" alt="Prewed 2"></div>
+                        <div class="slide"><img src="Prewed3.jpg" alt="Prewed 3"></div>
+                        <div class="slide"><img src="Prewed4.jpg" alt="Prewed 4"></div>
+                        <div class="slide"><img src="https://images.unsplash.com/photo-1606800052052-a7af714f6c4f?w=600" alt="Prewed 5"></div>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- Silsilah Keluarga -->
+    <section class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Keluarga Kami</h2>
+            <div class="family-tree">
+                <div class="family-bride">
+                    <h3><i class="fas fa-female"></i> Keluarga Nurul</h3>
+                    <div class="family-members">
+                        <div class="parent">Ayah: <strong>Mohamad Iufi</strong> & Ibu: <strong>Else Suryaningsih</strong></div>
+                        <div class="siblings">Saudara kandung: <em>Putri tunggal dari Bpk. Mohamad lufi & ibu Else Suryaningsih</em></div>
+                    </div>
+                </div>
+                <div class="family-groom">
+                    <h3><i class="fas fa-male"></i> Keluarga Dodi</h3>
+                    <div class="family-members">
+                        <div class="parent">Ayah: <strong>Camita</strong> & Ibu: <strong>Tursinah</strong></div>
+                        <div class="siblings">Saudara kandung: <em>Ratna (kakak perempuan), Eryana(adik perempuan)</em></div>
+                    </div>
+                </div>
+            </div>
+            <p class="family-note">Dengan penuh rasa hormat, kedua keluarga besar menyambung tali persaudaraan.</p>
+        </div>
+    </section>
+
+    <!-- Galeri Momen -->
+    <section class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Galeri Momen</h2>
+            <div class="gallery" id="gallery">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400" alt="Momen 1"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400" alt="Momen 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1606216794074-735e69e2b6b0?w=400" alt="Momen 3"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=400" alt="Momen 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="container">
+        <div class="countdown fade-up">
+            <h2 class="section-title">Menuju Hari Bahagia</h2>
+            <div class="timer" id="timer">
+                <div class="time-box"><div class="time-number" id="days">00</div><div class="time-label">Hari</div></div>
+                <div class="time-box"><div class="time-number" id="hours">00</div><div class="time-label">Jam</div></div>
+                <div class="time-box"><div class="time-number" id="minutes">00</div><div class="time-label">Menit</div></div>
+                <div class="time-box"><div class="time-number" id="seconds">00</div><div class="time-label">Detik</div></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Acara & Lokasi -->
+    <section class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Detail Acara</h2>
+            <div class="event-info">
+                <div class="event-card">
+                    <div class="event-icon"><i class="fas fa-mosque"></i></div>
+                    <h3>Akad Nikah</h3>
+                    <p class="event-time">08:00 - 10:00 WIB</p>
+                    <p>Masjid nasrullah, Jakarta barat</p>
+                    <a href="https://maps.app.goo.gl/cNynK45xe9jMNNRg9?g_st=ac" target="_blank" class="map-btn"><i class="fas fa-map-marked-alt"></i> Buka Peta</a>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
+                    <h3>Resepsi</h3>
+                    <p class="event-time">11:00 - 15:00 WIB</p>
+                    <p>depan halaman masjid nasrullah</p>
+                    <a href="https://maps.app.goo.gl/cNynK45xe9jMNNRg9?g_st=ac" target="_blank" class="map-btn"><i class="fas fa-map-marked-alt"></i> Buka Peta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP dengan Daftar Tamu -->
+    <section class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Konfirmasi Kehadiran</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Mohon isi form di bawah untuk mengkonfirmasi kehadiran Anda</p>
+            <form class="rsvp-form" id="rsvpForm">
+                <input type="text" id="rsvpName" placeholder="Nama Lengkap" required>
+                <input type="email" id="rsvpEmail" placeholder="Email" required>
+                <select id="rsvpAttendance" required>
+                    <option value="">Kehadiran</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+                <textarea id="rsvpMessage" rows="2" placeholder="Ucapan & Doa untuk pengantin"></textarea>
+                <button type="submit">Kirim Konfirmasi <i class="fas fa-paper-plane"></i></button>
+            </form>
+            <p id="rsvpStatus" style="text-align:center; margin-top:1rem; color:#b8875a;"></p>
+            <div id="rsvpListContainer" style="margin-top: 2rem;">
+                <h3 style="text-align: center; font-family: 'Cormorant Garamond', serif; color: #5e3c2e;">🙏 Tamu Yang Telah Mengkonfirmasi 🙏</h3>
+                <div id="rsvpList" class="rsvp-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rekening Bank -->
+    <section class="container">
+        <div class="card fade-up">
+            <h2 class="section-title">Kirim Hadiah & Doa</h2>
+            <p style="text-align: center; margin-bottom: 1rem;">Bagi Anda yang ingin memberikan hadiah, dapat melalui rekening berikut:</p>
+            <div class="bank-list">
+                <div class="bank-item">
+                    <i class="fas fa-university"></i>
+                    <div class="bank-detail">
+                        <strong>Bank Central Asia (BCA)</strong>
+                        <p>1600018937 - a.n. Nurul Awalia</p>
+                    </div>
+                    <button class="copy-btn" data-account="1600018937">Salin No. Rekening</button>
+                </div>
+                <div class="bank-item">
+                    <i class="fas fa-university"></i>
+                    <div class="bank-detail">
+                        <strong>Bank Mandiri</strong>
+                        <p>700013199745 - a.n. Nurul Awalia</p>
+                    </div>
+                    <button class="copy-btn" data-account="9876543210">Salin No. Rekening</button>
+                </div>
+                <div class="bank-item">
+                    <i class="fas fa-university"></i>
+                    <div class="bank-detail">
+                        <strong>Bank central asia (BCA)</strong>
+                        <p>0740128779 - a.n. Dodi Damhadi</p>
+                    </div>
+                    <button class="copy-btn" data-account="0740128779">Salin No. Rekening</button>
+                </div>
+            </div>
+            <p class="family-note" style="margin-top: 1rem;">Doa restu Anda adalah hadiah terindah. Terima kasih 🙏</p>
+        </div>
+    </section>
+
+<!-- Sosial Media -->
+<section class="container">
+    <div class="card fade-up">
+        <h2 class="section-title">Ikuti Kami di Media Sosial</h2>
+        <div class="social-media">
+            <!-- Instagram Dodi -->
+            <div class="social-item">
+                <a href="https://instagram.com/dodifals17" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                    <span class="platform">Instagram</span>
+                    <span class="username">@dodifals17</span>
+                </a>
+            </div>
+            <!-- Instagram Nurul -->
+            <div class="social-item">
+                <a href="https://instagram.com/nawl05" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                    <span class="platform">Instagram</span>
+                    <span class="username">@nawl05</span>
+                </a>
+            </div>
+            <!-- TikTok -->
+            <div class="social-item">
+                <a href="https://www.tiktok.com/@awalia0506?_r=1&_t=ZS-974Zoe4JJfo" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="platform">TikTok</span>
+                    <span class="username">@awalia0506</span>
+                </a>
+            </div>
+            <!-- Threads (sekarang pakai Font Awesome versi 6.7.2, dijamin muncul) -->
+            <div class="social-item">
+                <a href="https://threads.net/@dodifals17" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-threads"></i>
+                    <span class="platform">Threads</span>
+                    <span class="username">@dodifals17</span>
+                </a>
+            </div>
+        </div>
+        <p class="family-note" style="margin-top: 1rem;">Bagikan kebahagiaan kami dengan tagar <strong>#DodiNurulMenikah</strong></p>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Undangan Pernikahan Dodi & Nurul. <i class="fas fa-heart" style="color:#f3a683;"></i> Terima kasih atas doa restu.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
